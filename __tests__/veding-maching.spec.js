@@ -1,7 +1,7 @@
-const vendingMachine = require("../lib/vending-maching");
+const vendingMachine = require('../lib/vending-maching');
 
-describe("vending-machine", () => {
-  test("", () => {
+describe('vending-machine', () => {
+  test('', () => {
     const list = vendingMachine;
     expect(list).toEqual();
   });
