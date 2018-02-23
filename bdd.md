@@ -22,6 +22,12 @@ When it is plugged in
 Then vending machine displays a message 'Welcome, please enter selection'
 
 Story 2
+A vending machine needs to have a selection pad
+The vending machine needs a selection pad so users can make a selection
+
+Given Jenny is wanting a seagull
+When she presses the buttons
+Story 3
 A vending machine needs a key for every item
 The vending machine needs keys for every item so users can make a selection
 
@@ -35,3 +41,5 @@ Pepsi Co. wants to sell their products in a vending machine using individual tag
 As Pepsi Co. they want to sell their items with tags so users can
 A user wants to buy a Mars bar
 In order to provide the Mars bar, a user wants a place to input their selection
+
+If a coin is entered before an input have it slide back down
