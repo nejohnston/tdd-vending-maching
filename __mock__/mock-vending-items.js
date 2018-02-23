@@ -16,7 +16,12 @@ module.exports = [
   },
   {
     name: 'bird that hit window',
-    price: -2.5,
+    price: 0.25,
     stock: 0,
+  },
+  {
+    name: 'goose',
+    price: 4.75,
+    stock: 2,
   },
 ];
