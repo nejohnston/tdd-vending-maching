@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/nejohnston/tdd-vending-maching/issues"
   },
-  "homepage": "https://github.com/nejohnston/tdd-vending-maching#readme"
+  "homepage": "https://github.com/nejohnston/tdd-vending-maching#readme",
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
+  }
 }
