@@ -7,14 +7,14 @@ describe('item', () => {
   let sunChips;
   beforeEach(() => {
     item = new Item();
-    marsBar = new Item(['A', 0], 'mars bar', 2.5, 4);
+    marsBar = new Item(['A', 1], 'mars bar', 2.5, 4);
     pretzels = new Item(['C', 10], 'pretzels', 3, 2);
     sunChips = new Item(['', 0], 'sun chips', 2.5, 0);
   });
   test('Create a new item in vending machine with a name, price, and stock', () => {
     const vendingItem = marsBar;
     expect(vendingItem).toEqual({
-      code: ['A', 0],
+      code: ['A', 1],
       name: 'mars bar',
       price: 2.5,
       stock: 4,
@@ -22,13 +22,16 @@ describe('item', () => {
   });
   test('Does new item have a code', () => {
     const itemCode = marsBar.itemCode();
-    expect(itemCode).toEqual(['A', 0]);
+    expect(itemCode).toEqual(['A', 1]);
   });
   test('Test if the first item in code is string, second integer', () => {
     const correctFormat = marsBar.isCodeTypeValid();
     expect(correctFormat).toEqual('This code is valid');
   });
-
+  test('Are the code values correct', () => {
+    const correctValueLengths = marsBar.isCorrectCodeValues();
+    expect(correctValueLengths).toEqual('This item is: $2.5', marsBar.price);
+  });
   test('Check if this item is still in stock', () => {
     const result = marsBar.checkStock();
     expect(result).toEqual('This item is in stock');
