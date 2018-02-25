@@ -36,11 +36,13 @@ describe('item', () => {
   });
   describe('Failed responses', () => {
     test('Check if there is one letter and the number given is a number from 0 - 9', () => {
-      const incorrectStringValue = sunChips.isCodeLengthCorrect();
+      const incorrectStringValue = sunChips.isCodeStringLength();
       console.log(pretzels.code[1]);
       expect(incorrectStringValue).toEqual('Please enter a letter');
     });
-    test('Check if the number is from 0 - 9');
+    test('Check if the number is from 0 - 9', () => {
+      const incorrectNumberValue = pretzels.isCodeLengthCorrect;
+    });
     test('If this is out of stock, return out of stock', () => {
       const result = sunChips.checkStock();
       expect(result).toEqual('This item is out of stock');
