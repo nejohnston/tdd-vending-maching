@@ -29,16 +29,18 @@ describe('item', () => {
     console.log(marsBar.isCodeTypeValid());
     expect(correctFormat).toEqual('This code is valid');
   });
-  test('Check if there is one letter and the number given is a number from 0 - 9', () => {
-    const incorrectStringValue = sunChips.isCodeLengthCorrect();
-    console.log(pretzels.code[1]);
-    expect(incorrectStringValue).toEqual('Please enter a letter');
-  });
+
   test('Check if this item is still in stock', () => {
     const result = marsBar.checkStock();
     expect(result).toEqual('This item is in stock');
   });
   describe('Failed responses', () => {
+    test('Check if there is one letter and the number given is a number from 0 - 9', () => {
+      const incorrectStringValue = sunChips.isCodeLengthCorrect();
+      console.log(pretzels.code[1]);
+      expect(incorrectStringValue).toEqual('Please enter a letter');
+    });
+    test('Check if the number is from 0 - 9');
     test('If this is out of stock, return out of stock', () => {
       const result = sunChips.checkStock();
       expect(result).toEqual('This item is out of stock');
