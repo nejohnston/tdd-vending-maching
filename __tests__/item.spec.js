@@ -34,20 +34,18 @@ describe('item', () => {
     const result = marsBar.checkStock();
     expect(result).toEqual('This item is in stock');
   });
-  // describe('Failed responses', () => {
-  test('Check if there is one letter and the number given is a number from 0 - 9', () => {
-    const incorrectStringValue = sunChips.correctStringLength();
-    console.log(pretzels.code[1]);
-    expect(incorrectStringValue).toEqual('Please enter only one letter');
-  });
-  test('Check if the number is from 0 - 9', () => {
-    const incorrectNumberValue = pretzels.correctStringLength();
-    console.log(pretzels.correctStringLength());
-    expect(incorrectNumberValue).toEqual('Please enter a number from 0 - 9');
-  });
-  test('If this is out of stock, return out of stock', () => {
-    const result = sunChips.checkStock();
-    expect(result).toEqual('This item is out of stock');
+  describe('Failed responses', () => {
+    test('Check if there is one letter and the number given is a number from 0 - 9', () => {
+      const incorrectStringValue = sunChips.correctStringLength();
+      expect(incorrectStringValue).toEqual('Please enter only one letter');
+    });
+    test('Check if the number is from 0 - 9', () => {
+      const incorrectNumberValue = pretzels.correctStringLength();
+      expect(incorrectNumberValue).toEqual('Please enter a number from 0 - 9');
+    });
+    test('If this is out of stock, return out of stock', () => {
+      const result = sunChips.checkStock();
+      expect(result).toEqual('This item is out of stock');
+    });
   });
 });
-// });
