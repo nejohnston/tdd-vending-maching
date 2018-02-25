@@ -8,7 +8,7 @@ describe('item', () => {
   beforeEach(() => {
     item = new Item();
     marsBar = new Item(['A', 0], 'mars bar', 2.5, 4);
-    pretzels = new Item('C5', 'pretzels', 3, 2);
+    pretzels = new Item(['C', 10], 'pretzels', 3, 2);
     sunChips = new Item(['', 0], 'sun chips', 2.5, 0);
   });
   test('Create a new item in vending machine with a name, price, and stock', () => {
@@ -29,12 +29,19 @@ describe('item', () => {
     console.log(marsBar.isCodeTypeValid());
     expect(correctFormat).toEqual('This code is valid');
   });
+  test('Check if there is one letter and the number given is a number from 0 - 9', () => {
+    const incorrectCodeLength = pretzels.isCodeLengthCorrect();
+    console.log(pretzels.code[1]);
+    expect(incorrectCodeLength).toEqual('Please enter a number from 0 - 9');
+  });
   test('Check if this item is still in stock', () => {
     const result = marsBar.checkStock();
     expect(result).toEqual('This item is in stock');
   });
-  test('If this is out of stock, return out of stock', () => {
-    const result = sunChips.checkStock();
-    expect(result).toEqual('This item is out of stock');
+  describe('Failed responses', () => {
+    test('If this is out of stock, return out of stock', () => {
+      const result = sunChips.checkStock();
+      expect(result).toEqual('This item is out of stock');
+    });
   });
 });
