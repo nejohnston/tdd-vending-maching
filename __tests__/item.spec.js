@@ -42,6 +42,7 @@ describe('item', () => {
     });
     test('Check if the number is from 0 - 9', () => {
       const incorrectNumberValue = pretzels.correctStringLength();
+      expect(incorrectNumberValue).toEqual('Please enter a number from 0 - 9');
     });
     test('If this is out of stock, return out of stock', () => {
       const result = sunChips.checkStock();
