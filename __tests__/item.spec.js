@@ -7,13 +7,18 @@ describe('item', () => {
   let sunChips;
   beforeEach(() => {
     item = new Item();
-    marsBar = new Item('mars bar', 2.5, 4);
-    pretzels = new Item('pretzels', 3, 2);
-    sunChips = new Item('sun chips', 2.5, 0);
+    marsBar = new Item('A0', 'mars bar', 2.5, 4);
+    pretzels = new Item('C5', 'pretzels', 3, 2);
+    sunChips = new Item('', 'sun chips', 2.5, 0);
   });
   test('Create a new item in vending machine with a name, price, and stock', () => {
     const vendingItem = marsBar;
-    expect(vendingItem).toEqual({ name: 'mars bar', price: 2.5, stock: 4 });
+    expect(vendingItem).toEqual({
+      code: 'A0',
+      name: 'mars bar',
+      price: 2.5,
+      stock: 4,
+    });
   });
   test('Check if this item is still in stock', () => {
     const result = marsBar.checkStock();

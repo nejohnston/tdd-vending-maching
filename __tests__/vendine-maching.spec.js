@@ -6,7 +6,7 @@ describe('vendingMachine', () => {
     vendingMachineOn = new VendingMachine(true);
   });
   test('Check if the vending machine has power', () => {
-    const request = vendingMachineOn;
+    const request = vendingMachineOn.isPowerOn();
     expect(request).toEqual('Please make a selection');
   });
 });
