@@ -26,7 +26,6 @@ describe('item', () => {
   });
   test('Test if the first item in code is string, second integer', () => {
     const correctFormat = marsBar.isCodeTypeValid();
-    console.log(marsBar.isCodeTypeValid());
     expect(correctFormat).toEqual('This code is valid');
   });
 
@@ -36,11 +35,11 @@ describe('item', () => {
   });
   describe('Failed responses', () => {
     test('Check if there is one letter and the number given is a number from 0 - 9', () => {
-      const incorrectStringValue = sunChips.correctStringLength();
+      const incorrectStringValue = sunChips.isCorrectCodeValues();
       expect(incorrectStringValue).toEqual('Please enter only one letter');
     });
     test('Check if the number is from 0 - 9', () => {
-      const incorrectNumberValue = pretzels.correctStringLength();
+      const incorrectNumberValue = pretzels.isCorrectCodeValues();
       expect(incorrectNumberValue).toEqual('Please enter a number from 0 - 9');
     });
     test('If this is out of stock, return out of stock', () => {
