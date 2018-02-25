@@ -7,7 +7,7 @@ describe('item', () => {
   let sunChips;
   beforeEach(() => {
     item = new Item();
-    marsBar = new Item('A0', 'mars bar', 2.5, 4);
+    marsBar = new Item(['A', 0], 'mars bar', 2.5, 4);
     pretzels = new Item('C5', 'pretzels', 3, 2);
     sunChips = new Item('', 'sun chips', 2.5, 0);
   });
@@ -22,7 +22,7 @@ describe('item', () => {
   });
   test('Does new item have a code', () => {
     const itemCode = marsBar.itemCode();
-    expect(itemCode).toEqual('A0');
+    expect(itemCode).toEqual(['A', 0]);
   });
   test('Check if this item is still in stock', () => {
     const result = marsBar.checkStock();

@@ -1,5 +1,8 @@
 const coins = require('../lib/coins');
 
 describe('coins', () => {
-  test('');
+  test('', () => {
+    const result = coins;
+    expect(result).toEqual();
+  });
 });
