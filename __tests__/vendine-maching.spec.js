@@ -1,6 +1,6 @@
 const VendingMachine = require('../lib/vendine-maching');
 
-describe('vendine-maching', () => {
+describe('vendingMachine', () => {
   let vendingMachineOn;
   beforeEach(() => {
     vendingMachineOn = new VendingMachine(true);
