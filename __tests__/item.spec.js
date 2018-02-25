@@ -25,8 +25,8 @@ describe('item', () => {
     expect(itemCode).toEqual(['A', 0]);
   });
   test('Test if the first item in code is string, second integer', () => {
-    const correctFormat = marsBar.isCodeValid();
-    console.log(marsBar.isCodeValid());
+    const correctFormat = marsBar.isCodeTypeValid();
+    console.log(marsBar.isCodeTypeValid());
     expect(correctFormat).toEqual('This code is valid');
   });
   test('Check if this item is still in stock', () => {
