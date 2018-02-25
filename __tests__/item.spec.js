@@ -20,6 +20,10 @@ describe('item', () => {
       stock: 4,
     });
   });
+  test('Does new item have a code', () => {
+    const itemCode = marsBar.itemCode();
+    expect(itemCode).toEqual('A0');
+  });
   test('Check if this item is still in stock', () => {
     const result = marsBar.checkStock();
     expect(result).toEqual('This item is in');
