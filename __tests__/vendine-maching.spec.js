@@ -1,9 +1,13 @@
-const vendingMachine = require('../lib/vendine-maching');
+const VendingMachine = require('../lib/vendine-maching');
 
 describe('vendine-maching', () => {
+  let vendingMachineOn;
+  beforeEach(() => {
+    vendingMachineOn = new VendingMachine(true);
+  });
   test('Check if the vending machine has power', () => {
-    const list = vendingMachine;
-    expect(list).toEqual();
+    const request = vendingMachineOn;
+    expect(request).toEqual('Please make a selection');
   });
 });
 
