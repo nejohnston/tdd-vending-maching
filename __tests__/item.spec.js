@@ -24,10 +24,13 @@ describe('item', () => {
     const itemCode = marsBar.itemCode();
     expect(itemCode).toEqual(['A', 0]);
   });
+  test('Test if the first item in code is string, second integer', () => {
+    const correctFormat = marsBar.isCodeValid();
+    expect(correctFormat).toEqual('This item is: $', marsBar.price);
+  });
   test('Check if this item is still in stock', () => {
     const result = marsBar.checkStock();
-    console.log(marsBar);
-    expect(result).toEqual('This item is in');
+    expect(result).toEqual('This item is in stock');
   });
   test('If this is out of stock, return out of stock', () => {
     const result = sunChips.checkStock();
