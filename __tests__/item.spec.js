@@ -30,9 +30,9 @@ describe('item', () => {
     expect(correctFormat).toEqual('This code is valid');
   });
   test('Check if there is one letter and the number given is a number from 0 - 9', () => {
-    const incorrectCodeLength = pretzels.isCodeLengthCorrect();
+    const incorrectStringValue = sunChips.isCodeLengthCorrect();
     console.log(pretzels.code[1]);
-    expect(incorrectCodeLength).toEqual('Please enter a number from 0 - 9');
+    expect(incorrectStringValue).toEqual('Please enter a letter');
   });
   test('Check if this item is still in stock', () => {
     const result = marsBar.checkStock();
