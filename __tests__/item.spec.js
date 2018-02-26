@@ -37,6 +37,10 @@ describe('item', () => {
       const result = marsBar.checkStock();
       expect(result).toEqual('This item is in stock');
     });
+    test('This will print the inventory', () => {
+      const result = [marsBar, pretzels, sunChips].printInventory();
+      expect(result).toEqual([1, 10, 0]);
+    });
   });
   describe('Failed responses', () => {
     test('Check if there is one letter and the number given is a number from 0 - 9', () => {
